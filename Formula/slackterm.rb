@@ -1,25 +1,25 @@
 class Slackterm < Formula
   desc "Slack in your terminal: real time, threads, search and sections, all from the keyboard"
   homepage "https://github.com/simoncdna/slackterm"
-  version "0.1.0"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/simoncdna/slackterm/releases/download/v0.1.0/slackterm-aarch64-apple-darwin.tar.xz"
-      sha256 "ce12609a4081c3629b01981f5218b91285641e76222fc9be82b6317679de87e7"
+      url "https://github.com/simoncdna/slackterm/releases/download/v0.2.0/slackterm-aarch64-apple-darwin.tar.xz"
+      sha256 "6bb36a5efdac28da45981c65f74d44892628541e680c6d332369d5c4489258db"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/simoncdna/slackterm/releases/download/v0.1.0/slackterm-x86_64-apple-darwin.tar.xz"
-      sha256 "2278db31b9304d5e157f9d9fe37efc650f02120fc5d77128ac76f72b4b60f287"
+      url "https://github.com/simoncdna/slackterm/releases/download/v0.2.0/slackterm-x86_64-apple-darwin.tar.xz"
+      sha256 "f19f88ab23083d03ad69fc235ce4c61ecc4bd386c3d484099c7baa82735a84eb"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/simoncdna/slackterm/releases/download/v0.1.0/slackterm-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "d1b8ecbdb3fff69fe24b26d88bd97930aeea75b9e976662c2294aea0461bee3b"
+      url "https://github.com/simoncdna/slackterm/releases/download/v0.2.0/slackterm-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "bade23df12c5b1c44862c87b650991ab1ae5ae233424ab3c4c601d52b1f8b58f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/simoncdna/slackterm/releases/download/v0.1.0/slackterm-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "b0234e9ac9e6157a92739ea22e99e89253a898cc72dea58d43a298ae38fa755f"
+      url "https://github.com/simoncdna/slackterm/releases/download/v0.2.0/slackterm-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d4d20986689948ef27ac1b5ea2f55c38cab4514d26c97d01780f92e1bf81ccdb"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
