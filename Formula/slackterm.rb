@@ -1,35 +1,39 @@
 class Slackterm < Formula
   desc "Slack in your terminal: real time, threads, search and sections, all from the keyboard"
   homepage "https://github.com/simoncdna/slackterm"
-  version "0.2.0"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/simoncdna/slackterm/releases/download/v0.2.0/slackterm-aarch64-apple-darwin.tar.xz"
-      sha256 "6bb36a5efdac28da45981c65f74d44892628541e680c6d332369d5c4489258db"
+      url "https://github.com/simoncdna/slackterm/releases/download/v0.3.0/slackterm-aarch64-apple-darwin.tar.xz"
+      sha256 "344daac0ad0e0786264ae1b36ef479ab0169f295bb5a1baa525d6562a778b855"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/simoncdna/slackterm/releases/download/v0.2.0/slackterm-x86_64-apple-darwin.tar.xz"
-      sha256 "f19f88ab23083d03ad69fc235ce4c61ecc4bd386c3d484099c7baa82735a84eb"
+      url "https://github.com/simoncdna/slackterm/releases/download/v0.3.0/slackterm-x86_64-apple-darwin.tar.xz"
+      sha256 "0780414d9ece9a31be14dcd195e28818cbb39dea566baccaa79446f8de9a9271"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/simoncdna/slackterm/releases/download/v0.2.0/slackterm-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "bade23df12c5b1c44862c87b650991ab1ae5ae233424ab3c4c601d52b1f8b58f"
+      url "https://github.com/simoncdna/slackterm/releases/download/v0.3.0/slackterm-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "9c21a3d29f16304ea07d66885150e40c7341a23b8c8d17bca76440350162d03d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/simoncdna/slackterm/releases/download/v0.2.0/slackterm-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d4d20986689948ef27ac1b5ea2f55c38cab4514d26c97d01780f92e1bf81ccdb"
+      url "https://github.com/simoncdna/slackterm/releases/download/v0.3.0/slackterm-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "43bad72d1d47cb620c861bb98274cae99321b3188adbca6f0665d1ca9d837028"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":      {},
-    "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin":       {},
-    "x86_64-pc-windows-gnu":     {},
-    "x86_64-unknown-linux-gnu":  {},
+    "aarch64-apple-darwin":               {},
+    "aarch64-unknown-linux-gnu":          {},
+    "aarch64-unknown-linux-musl-dynamic": {},
+    "aarch64-unknown-linux-musl-static":  {},
+    "x86_64-apple-darwin":                {},
+    "x86_64-pc-windows-gnu":              {},
+    "x86_64-unknown-linux-gnu":           {},
+    "x86_64-unknown-linux-musl-dynamic":  {},
+    "x86_64-unknown-linux-musl-static":   {},
   }.freeze
 
   def target_triple
